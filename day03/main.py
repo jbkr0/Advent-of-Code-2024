@@ -11,7 +11,7 @@ with open('input.txt', 'r') as fichier:
     ligne = fichier.readline()
     while ligne:
         tokens = re.split(r'(\bdo\(\)|\bdon\'t\(\)|mul\(\d+,\d+\))', ligne.strip())
-    
+
         for token in tokens:
             if re.match(pattern_do, token):
                 b = True
