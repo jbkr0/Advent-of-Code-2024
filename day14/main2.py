@@ -15,29 +15,6 @@ robots = []
 for match in matches:
     robots.append([int(match[0]), int(match[1]), int(match[2]), int(match[3])])
 
-# def nb_robots(x, y):
-#     count = 0
-#     for robot in robots:
-#         if robot[0] == x and robot[1] == y:
-#             count += 1
-#     return count
-
-# def count_price(map, i, j, path) -> int:
-#     if (i, j) in path:
-#         return 0
-#     path.add((i, j))
-#     count = 1
-
-#     if j + 1 < width and map[i][j + 1] > 0:
-#         count += count_price(map, i, j + 1, path)
-#     if j - 1 >= 0 and map[i][j - 1] > 0:
-#         count += count_price(map, i, j - 1, path)
-#     if i + 1 < height and map[i + 1][j] > 0:
-#         count += count_price(map, i + 1, j, path)
-#     if i - 1 >= 0 and map[i - 1][j] > 0:
-#         count += count_price(map, i - 1, j, path)
-#     return count
-
 def create_robot_positions():
     positions = defaultdict(list)
     for idx, robot in enumerate(robots):
@@ -92,4 +69,3 @@ while True:
         if is_Easter_Egg():
             break
     print_robots()
-
